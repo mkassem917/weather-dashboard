@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
 
     <!-- Styling and Library -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-  
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
 
     <title>Weather Forecast</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Header -->
     <header class="container-fluid text-center text-white p-2">
-        <h1>Weather Dashboard</h1>
+      <h1>Weather Dashboard</h1>
     </header>
 
+    <!-- Search city field with button -->
     <div class="container-fluid">
-        <div class="row">
-            <aside class="col-lg-1 bg-sky blue">
-                <h6 class="mt-1">Search here for a city</h6>
-                <div class="form-inline form-group">
-                    <input type="text" class="form-control" id="search-value" />
-                    <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-                </div>
+      <div class="row">
+        <aside class="col-lg-1 bg-sky blue">
+          <h6 class="mt-1">Search here for a city</h6>
+          <div class="form-inline form-group">
+            <input type="text" class="form-control" id="search-value" />
+            <button class="search-btn" id="search-btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <!-- City history list on the left side of the page-->
+          <ul class="list-group history"></ul>
+        </aside>
 
-            </aside>
+        <div class="col-lg-12">
+          <div id="today" class="mt-4">
+            <div id="forcast" class="mt-4"></div>
+          </div>
         </div>
+      </div>
     </div>
-    
-</body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/assets/script.js"></script>
+  </body>
 </html>
